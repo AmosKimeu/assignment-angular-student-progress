@@ -1,0 +1,40 @@
+<h3>Add Assignment</h3>
+<p>
+    Assignment Name: <input [(ngModel)]="assignment" type="text" placeholder="assignment" />
+</p>
+<p>
+    Scored Points: <input [(ngModel)]="scoredpoints" type="number" placeholder="scoredpoints" />
+</p>
+<p>
+    Points Possible: <input [(ngModel)]="possiblepoints" type="number" placeholder="possiblepoints" />
+</p>
+<button type="button" (click)="updateStudentAssignments()"> Add Assignment</button>
+<br>
+<!-- {{assignment}}
+{{scoredpoints}}
+{{possiblepoints}} -->
+<br>
+<h3> Recorded Assignments</h3>
+<table>
+    <tr>
+        <th>Assignment</th>
+        <th>Points scored</th>
+        <th>Possible Points</th>
+        <th>Percent</th>
+    </tr>
+    <tr *ngFor="let result of results">
+        <td>
+            {{result.newAssignmentName}}
+        </td>
+        <td>
+            {{result.newPointsScored}}
+        </td>
+        <td>
+            {{result.newPossiblePoints}}
+        </td>
+        <td>
+            {{result.newPercent}}%
+        </td>
+    </tr>
+</table>
+
